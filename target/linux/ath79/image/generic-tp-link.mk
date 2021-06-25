@@ -426,6 +426,16 @@ define Device/tplink_eap245-v3
 endef
 TARGET_DEVICES += tplink_eap245-v3
 
+define Device/tplink_ec230-g1
+  $(Device/tplink-v2)
+  SOC := qca9563
+  IMAGE_SIZE := 16000k
+  DEVICE_MODEL := EC230-G1
+  TPLINK_BOARD_ID := EC230-G1
+  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca9888-ct
+endef
+TARGET_DEVICES += tplink_ec230-g1
+
 define Device/tplink_re350k-v1
   $(Device/tplink-safeloader)
   SOC := qca9558
